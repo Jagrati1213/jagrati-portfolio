@@ -1,0 +1,359 @@
+/*  color: rgb(0,214,70);  green color */
+/* rgb(50 65 88 / 96%)  dark blue color */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');/*----poppin bolder font----*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap'); /*----poppin bold font----*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /*----- robot font-----*/
+:root{
+  --main-color:lightgreen;
+  --main-bgcolor:#3a425a;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background:rgb(137,145,167);
+    background: #3a425a;
+    font-family: 'Poppins', sans-serif; /*----bolder font----*/
+    /* font-family: 'Poppins', sans-serif; bold font */
+}
+/* nav bar */
+nav{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0 10px;
+  box-shadow: 0.00px 4.00px 27px 0px rgba(45,45,45,0.15);
+  border-bottom: none;
+  transition: all .5s ease;
+}  
+.nav-list{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+.nav-items{
+list-style-type: none;
+transition: all .3s ease-in;
+position: relative;
+}
+.nav-link{
+text-decoration: none;
+padding: 0 32px;
+color: rgba(197, 195, 195, 0.897);
+transition: all .3s ease-in;
+}
+.nav-link:after {    
+  content: "";
+  height: 2px;
+  position:absolute;
+  left: 50%;
+  bottom: 0;
+  background: var(--main-color);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width:0%;
+}
+.nav-link:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+.active ,.about-head{
+  color: var(--main-color);
+}
+.nav-link:hover{
+  color: var(--main-color);
+}
+.openMenu,.logoname{
+display: none;
+}
+/*************** Section -Intro ****************/
+.intro h1{
+  font-size: 4.2rem;
+  font-weight: bolder;
+  letter-spacing: 0.7rem;
+  font-family: 'Roboto', sans-serif;
+}
+/*************** Section -About ****************/
+#about-section{  
+  min-height: 100vh;
+  border-top: 1px solid var(--main-color);
+  background:var(--main-bgcolor);
+  background-repeat:no-repeat;
+
+}
+#about-container{
+  background: #535d7a;
+  box-shadow: 0.00px 4.00px 27px 0px rgba(45,45,45,0.15);
+}
+.about-head:after{
+  content: "";
+  height: 2px;
+  position:absolute;
+  left: 50%;
+  top: 58px;
+  background: var(--main-color);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width:0%;
+}
+.about-head:hover:after{
+  width: 100%;
+  left: 0;
+}
+#about-section p{
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+#about-section #jag-img{
+  width: 500pc;
+  height: 79vh;
+}
+/*************** Section Skill  **************/
+#professional-section{
+  background: var(--main-bgcolor);
+  border-top: 1px solid var(--main-color);
+  min-height: 100vh;
+}
+#professional-section h1,#professional-section h4,#work-section h1{
+  letter-spacing: 3px;
+  text-align: center;
+  }
+#professional-section h1,#work-section h1{
+  letter-spacing: 10px;
+  font-size: 4rem;
+}
+#professional-section span{
+color: lightgray;
+margin-top: 2pc;
+}
+.progress {
+  border-radius: 0;
+  background:transparent;
+  height: 20px;
+  margin-top: 1pc;
+}
+.progress-bar{
+  background: var(--main-color);
+  color:var(--main-bgcolor);
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 2px;
+  border-radius: 10px;
+}
+/*************** Section Works ******************/
+#work-section{
+  border-top: 1px solid var(--main-color);
+  min-height: 90vh;
+}
+#work-container{
+  width: 90%;
+  background-color:var(--main-bgcolor);
+  color: aliceblue;
+}
+#work-section .col-lg-3{
+   width: 33%;
+}
+/**************** Footer- Section **************/
+footer{
+  background-color: #1b2647;
+  color: lightgray;
+}
+.fab {
+  font-weight: 400;
+  margin: 1rem;
+  font-size: 17px;
+  color: lightgray;
+  transition: all .3s linear;
+}
+.fab:hover{
+  color:var(--main-color);
+  cursor: pointer;
+}
+footer a,footer span,.f-icons{
+  text-decoration: none;
+  color: lightgray;
+  font-size: 15px;
+}
+footer a:hover{
+  color:var(--main-bgcolor);
+}
+footer a{
+height: 0;
+}
+.f-social{
+ height: 4vh;
+}
+/***************** media query ****************/
+/* tablet  */
+@media screen and (max-width:768px){
+  #about-container{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  #contact-container{
+    width: 100%;
+  }
+  .contact-head{
+    font-size: 2.8rem;
+  } 
+  .fab{
+    font-size: 16px;
+  }
+}
+/* tablet to small size phones */
+@media screen and (max-width: 950px) {
+.intro h1{
+  font-size: 3rem; 
+  padding-left: 2rem;
+}
+.intro h2{
+  padding-left: 2rem;
+}
+#about-section p {
+  font-size: 13px;
+}
+nav,.nav-list{
+display: flex;
+}
+.nav-var{
+display: block;
+position: fixed;
+top: 0px;
+left: -100%;
+width: 100%;
+height: 100vh;
+background:var(--main-color);
+box-shadow: 1px 1px 10px var(--main-bgcolor);
+transition: all 1s ease;
+}
+.openMenu{
+display: block;
+color: var(--main-color);
+font-size: 2.3rem;
+
+}
+.nav-list{
+height: inherit;
+flex-direction: column;
+justify-content: unset;
+padding: 0;
+}
+.nav-items{
+line-height: 5rem;
+width: 100%;
+font-size: 25px;
+text-align: center;
+}
+.nav-link{
+  font-size: 22px;
+  padding: 0;
+  color:#474747ab;
+  font-weight: 500;
+}
+.active{
+  color:black;
+}
+.nav-logo,.closeMenu{
+color:black;
+font-size: 2rem;
+padding: 0 0 0 2rem;
+}
+.logoname{
+display:flex;
+font-size: 2rem;
+color: var(--main-bgcolor);
+justify-content: space-between;
+border-bottom: 2px solid #3a425a;
+padding: 11px 29px 0 29px;
+}
+#about-section p{
+  padding-left: 5px;
+}
+#professional-section h1 {
+  font-size: 3rem;
+}
+
+#contact-pera{
+  font-size: 13px;
+  padding: 5px 3px 7px 3px;
+}
+footer a {
+  font-size: 12px;
+}
+}
+/* phone small size */
+@media  screen and (max-width:425px) {
+  .logoname {
+    font-size: 1.8rem;
+    padding: 11px 10px 0 8px;
+}
+.openMenu{
+  font-size: 1.6rem;
+}
+.intro h1{
+    font-size: 3rem;
+    padding-left: 2rem;
+    letter-spacing: 0.2rem;
+  }
+.intro h2{
+    padding-left: 2rem;
+  }
+#about-section {
+    min-height: 117vh;
+  }
+.about-sec p{
+    /* font-family: 'Roboto', sans-serif; */
+    letter-spacing: 0px;
+  }
+#about-section #jag-img {
+    width: 500pc;
+    height: 60vh;
+  }
+#about-container{
+    width: 100%;
+    margin-top: 2rem;
+  }
+#about-section p {
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 11px;
+}
+#professional-section h1 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+#professional-section h4 {
+  letter-spacing: 1px;
+ font-size: 16px;
+}
+#professional-section span{
+  font-size: 14px;
+};
+#professional-section .progress-bar{ 
+  font-size: 12px;
+    font-weight: bold;
+}
+#professional-section {
+  min-height: 88vh;
+}
+#contact-container{
+  width: 100%;
+}
+.contact-head {
+  letter-spacing: 3px;
+  font-size: 2rem;
+}
+#contact-email{
+  padding-left: 3px;
+  font-size: 12px;
+}
+footer a, footer span{
+  font-size: 12px;
+}
+.fab {
+  font-size: 16px;
+}
+#contact-container div{
+  width: 100%;
+}
+}
