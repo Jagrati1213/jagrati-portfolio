@@ -150,9 +150,23 @@ margin-top: 2pc;
   background-color:var(--main-bgcolor);
   color: aliceblue;
 }
-#work-section .col-lg-3{
-   width: 33%;
+#work-section h1{
+  position: relative;
 }
+#work-section h1::before{
+  position: absolute;
+  content: '';
+  background:lightgreen;
+  height: 3px;
+  width: 34vh;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  margin-top: 1rem;
+}
+/* #work-section .col-lg-3{
+   width: 33%;
+} */
 /**************** Footer- Section **************/
 footer{
   background-color: #1b2647;
