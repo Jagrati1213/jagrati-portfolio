@@ -8,7 +8,7 @@ here, you can know about me .
 - Bootstrap
 - MD Bootstrap
 - Font Awesome
-- AOS\
+- AOS
 ## ##
 **I learnt how to add animation**\
 *You Can check out the [Portfolio](https://Jagrati1213.github.io/jagrati-portfolio)*
